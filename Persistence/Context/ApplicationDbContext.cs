@@ -8,7 +8,7 @@ using Domain;
 
 namespace Persistence.Context
 {
-    public class ApplicationDbContext 
+    public class ApplicationDbContext
         : IdentityDbContext<ApplicationUser, ApplicationRole, string, IdentityUserClaim<string>, IdentityUserRole<string>,
             IdentityUserLogin<string>, ApplicationRoleClaim, IdentityUserToken<string>>
     {
