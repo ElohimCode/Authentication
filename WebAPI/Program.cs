@@ -18,6 +18,7 @@ builder.Services.AddCors(o =>
 builder.Services.AddControllers();
 builder.Services.AddDataBase(builder.Configuration);
 builder.Services.AddIdentitySettings();
+builder.Services.AddRepositoryService();
 builder.Services.AddPersistenceDependencies();
 
 builder.Services.AddEndpointsApiExplorer();

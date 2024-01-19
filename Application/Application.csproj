@@ -23,8 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AppConfig\" />
-    <Folder Include="Exceptions\" />
+    <Folder Include="AppConfigs\" />
+    <Folder Include="Contracts\DataAccess\Employee\" />
+    <Folder Include="Contracts\Services\" />
+    <Folder Include="Features\" />
   </ItemGroup>
 
 </Project>

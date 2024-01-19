@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Common.Responses;
+using Common.Responses.Identity;
 using Persistence.Models;
 
 namespace Persistence

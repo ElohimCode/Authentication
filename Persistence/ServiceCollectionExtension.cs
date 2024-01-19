@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Application.Contracts.DataAccess.Common;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Persistence.Context;
+using Persistence.DataAccess.Common;
 using Persistence.DbConfig;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
-using System.Data.Common;
 using System.Reflection;
 
 namespace Persistence
@@ -37,6 +38,14 @@ namespace Persistence
 
         //public static IServiceCollection AddIdentityServices(this IServiceCollection services) { 
         //}
+
+        public static IServiceCollection AddRepositoryService(this IServiceCollection services)
+        {
+            services
+                .AddScoped(typeof(IBaseRepository<,>), typeof(BaseRepository<,>));
+               
+            return services;
+        }
 
         public static void AddPersistenceDependencies(this IServiceCollection services)
         {
